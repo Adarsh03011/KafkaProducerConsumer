@@ -2,14 +2,8 @@ package org.example;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Serializer;
-
-import java.nio.ByteBuffer;
 import java.util.Map;
-
-import static org.apache.kafka.common.requests.DeleteAclsResponse.log;
-
 public class CustomSerializer implements Serializer<Customer> {
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -30,6 +24,5 @@ public class CustomSerializer implements Serializer<Customer> {
             } catch (JsonProcessingException e) {
                 throw new RuntimeException(e);
             }
-
     }
 }
