@@ -1,0 +1,9 @@
+syntax = "proto2";
+package proto;
+option java_package = "org.example";
+
+message Record{
+  optional int32 id = 1;
+  optional string name = 2;
+  optional string location = 3;
+}
