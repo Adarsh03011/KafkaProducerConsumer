@@ -15,7 +15,7 @@ import java.util.Properties;
 public class Consumer {
     public static void main(String[] args) throws InvalidProtocolBufferException {
         Logger logger = LoggerFactory.getLogger(Consumer.class);
-        String bootstrapServers = "127.0.0.1:9092";
+        String bootstrapServers = "host.docker.internal:9092";
         String grp_id = "second_app";
         String topic = "newTopic";
         // Creating consumer properties
